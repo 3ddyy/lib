@@ -6,20 +6,60 @@
 	<title>Libtesting</title>
 </head>
 <body>
-	<script src="lib/lib.js"></script>
-	<script src="lib/monoid.js"></script>
-	<script src="lib/maybe.js"></script>
-	<script src="lib/either.js"></script>
-	<script src="lib/vector.js"></script>
-	<script src="lib/pair.js"></script>
-	<script src="lib/state.js"></script>
-	<script src="lib/store.js"></script>
-	<script src="lib/tree.js"></script>
-	<script src="lib/color.js"></script>
-	<script src="lib/task.js"></script>
-	<script src="lib/io.js"></script>
-	<script src="lib/canvas.js"></script>
-	<script src="lib/game.js"></script>
-	<script src="lib/ilist.js"></script>
+	<script type="module" src="lib/array.js"></script>
+	<script type="module" src="lib/canvas.js"></script>
+	<script type="module" src="lib/category_theory.js"></script>
+	<script type="module" src="lib/color.js"></script>
+	<script type="module" src="lib/dom.js"></script>
+	<script type="module" src="lib/either.js"></script>
+	<script type="module" src="lib/function.js"></script>
+	<script type="module" src="lib/game.js"></script>
+	<script type="module" src="lib/ilist.js"></script>
+	<script type="module" src="lib/internal.js"></script>
+	<script type="module" src="lib/io.js"></script>
+	<script type="module" src="lib/logic.js"></script>
+	<script type="module" src="lib/maybe.js"></script>
+	<script type="module" src="lib/monoid.js"></script>
+	<script type="module" src="lib/number.js"></script>
+	<script type="module" src="lib/object.js"></script>
+	<script type="module" src="lib/pair.js"></script>
+	<script type="module" src="lib/state.js"></script>
+	<script type="module" src="lib/store.js"></script>
+	<script type="module" src="lib/string.js"></script>
+	<script type="module" src="lib/task.js"></script>
+	<script type="module" src="lib/tree.js"></script>
+	<script type="module" src="lib/vector.js"></script>
+	<script type="module">
+import * as array from "/lib/array.js";
+import * as canvas from "/lib/canvas.js";
+import * as category_theory from "/lib/category_theory.js";
+import * as color from "/lib/color.js";
+import * as dom from "/lib/dom.js";
+import * as either from "/lib/either.js";
+import * as function_ from "/lib/function.js";
+import * as game from "/lib/game.js";
+import * as ilist from "/lib/ilist.js";
+import * as internal from "/lib/internal.js";
+import * as io from "/lib/io.js";
+import * as logic from "/lib/logic.js";
+import * as maybe from "/lib/maybe.js";
+import * as monoid from "/lib/monoid.js";
+import * as number from "/lib/number.js";
+import * as object from "/lib/object.js";
+import * as pair from "/lib/pair.js";
+import * as state from "/lib/state.js";
+import * as store from "/lib/store.js";
+import * as string from "/lib/string.js";
+import * as task from "/lib/task.js";
+import * as tree from "/lib/tree.js";
+import * as vector from "/lib/vector.js";
+
+[
+	array, canvas, category_theory, color, dom, either, function_, game, ilist,
+	internal, io, logic, maybe, monoid, number, object, pair, state, store,
+	string, task, tree, vector
+].map(object.mapk(f => name => window[name] = f));
+
+	</script>
 </body>
 </html>
